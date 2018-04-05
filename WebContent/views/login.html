@@ -1,0 +1,14 @@
+<div id="features">
+    <div class="wrapper">
+        <ul>
+            <li class="feature-1">
+            <span style="color:red" class="error" ng-show="error.message!=undefined">{{error.message}}</span>
+            <span style="color:blue" class="msg" ng-show="message!=undefined">{{message}}</span>
+            <span style="color:red">{{error.message}}</span>
+                <h4>Email:</h4>
+                <p><input type="email" Data-ng-model="user.email" class="form-control" placeholder="Enter Email"/></p>
+                <h4>Password:</h4>
+                <p><input type="password" Data-ng-model="user.password" class="form-control" placeholder="Enter Password"/></p>
+                <a href="" ng-click="login(user)" class="button-1">Login</a>
+            </li>
+            </ul></div></div>

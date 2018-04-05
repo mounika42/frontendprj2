@@ -1,0 +1,18 @@
+<div id="primary-content">
+<div class="wrapper"> 
+<h3>Find Friends</h3>    
+<table>
+<tr ng-repeat="user in suggestedUsers | orderBy:'firstname.length'">
+<td>
+<img src="http://localhost:8181/Middlewareprj2/getimage/{{user.email}}" height="30px" width="30px" class="img-circle">
+</td>
+<td>
+{{user.firstname}} &nbsp;{{user.lastname}}<br>
+</td>
+<td>
+<a ng-click="addFriend(user)"><i class="fa fa-user-plus" style="font-size:15px"></i></a></p>
+</td>
+</tr>
+</table>
+</div>
+</div>

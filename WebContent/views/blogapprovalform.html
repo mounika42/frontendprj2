@@ -1,0 +1,19 @@
+<div id="secondary-content">
+    <div class="wrapper">
+    <span ng-show="blogsWaitingForApproval.length==0"><h5>No Blogs waiting for approval</h5></span>
+<h5>{{blog.blogTitle}}</h5><br>
+<b>On:</b>{{blog.postedOn | date:'medium'}}<br>
+<b>By:</b><img src="http://localhost:8181/middleware/getimage/{{blog.postedBy.email}}" height="20px" width="20px" class="img-circle">&nbsp;{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
+
+<div>
+<p ng-bind-html="content"></p>
+<a href="" ng-click="approve(blog)" class="button-3">Approve</a> &nbsp; 
+<a href="" ng-click="showRejectionTxt()" class="button-4">Reject</a>
+<div ng-show="rejectionTxt">
+<b>Reason:</b><br>
+<p><input ng-model="rejectionReason" placeholder="Enter vaild reason"/></p>
+<a href="" ng-click="reject(blog)" class="button-4">Submit</a>
+</div>
+</div>
+</div>
+</div>

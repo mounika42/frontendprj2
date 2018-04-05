@@ -1,0 +1,13 @@
+<div id="secondary-content">
+    <div class="wrapper">
+    <span ng-show="blogsWaitingForApproval.length==0">No Blogs waiting for approval</span>
+    <div ng-repeat="blog in blogsWaitingForApproval">
+<h5><a href="#/getblognotapproved/{{blog.id}}">{{blog.blogTitle}}</a></h5>
+<div class="panel-body">
+<b>On:</b>{{blog.postedOn | date:'medium'}}<br>
+<b>By:</b><img src="http://localhost:8181/Middlewareprj2/getimage/{{blog.postedBy.email}}" height="20px" width="20px" class="img-circle">&nbsp;{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
+</div>
+</div>
+</div>
+</div>
+
